@@ -6,7 +6,7 @@ import {
   closeMenu,
   openCatalogMenu,
   openMenu,
-} from '@/context/madalas'
+} from '@/context/modals'
 import { addOverflowHiddenToBody } from '@/lib/utils/common'
 import CatalogMenu from '../Header/CatalogMenu'
 
