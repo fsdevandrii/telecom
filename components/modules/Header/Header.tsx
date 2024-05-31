@@ -1,10 +1,11 @@
 'use client'
-import { useLang } from '@/hooks/useLang'
-import Logo from '@/components/elements/Logo/Logo'
 import Link from 'next/link'
+
 import Menu from './Menu'
+import { openMenu, openSearchModal } from '@/context/modals'
 import { addOverflowHiddenToBody } from '@/lib/utils/common'
-import { openMenu } from '@/context/madalas'
+import Logo from '@/components/elements/Logo/Logo'
+import { useLang } from '@/hooks/useLang'
 
 const Header = () => {
   const { lang, translations } = useLang()
@@ -12,6 +13,11 @@ const Header = () => {
   const handleOpenMenu = () => {
     addOverflowHiddenToBody()
     openMenu()
+  }
+
+  const handleOpenSearchModal = () => {
+    openSearchModal()
+    addOverflowHiddenToBody()
   }
 
   return (
@@ -26,7 +32,10 @@ const Header = () => {
         </div>
         <ul className='header__links list-reset'>
           <li className='header__links__item'>
-            <button className='btn-reset header__links__item__btn header__links__item__btn--search' />
+            <button
+              className='btn-reset header__links__item__btn header__links__item__btn--search'
+              onClick={handleOpenSearchModal}
+            />
           </li>
           <li className='header__links__item'>
             <Link
@@ -59,3 +68,6 @@ const Header = () => {
 }
 
 export default Header
+// function openSearchModal() {
+//   throw new Error('Function not implemented.')
+// }
