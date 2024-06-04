@@ -16,7 +16,7 @@ import productSubtitleStyles from '@/styles/productSubtitle/index.module.scss'
 
 const Hero = () => {
   const { lang, translations } = useLang()
-
+  // Массив со слайдами на главном экране
   const slides = [
     {
       id: 1,
