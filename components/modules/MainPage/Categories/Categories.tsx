@@ -1,8 +1,8 @@
 'use client'
-// import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
-// import AllLink from '@/components/elements/AllLink/AllLink'
-// import useImagePreloader from '@/hooks/useImagePreloader'
+import AllLink from '@/components/elements/AllLink/AllLink'
+import useImagePreloader from '@/hooks/useImagePreloader'
 import { useLang } from '@/hooks/useLang'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import img1 from '@/public/img/categories-img-1.png'
@@ -10,8 +10,7 @@ import img2 from '@/public/img/categories-img-2.png'
 import img3 from '@/public/img/categories-img-3.png'
 import img4 from '@/public/img/categories-img-4.png'
 import styles from '@/styles/main-page/index.module.scss'
-import AllLink from '@/components/elements/AllLink/AllLink'
-// import MainSlider from '../MainSlider'
+import MainSlider from '../MainSlider'
 
 const Categories = () => {
   const { lang, translations } = useLang()
