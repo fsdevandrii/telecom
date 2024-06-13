@@ -1,3 +1,4 @@
+//eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config()
 // In this file you can configure migrate-mongo
 
