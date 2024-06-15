@@ -53,7 +53,7 @@ const upperMaterials = [
 const liningMaterials = ['taffeta', 'viscose', 'polyester', 'chiffon', 'satin']
 
 module.exports = {
-  async up(db, client) {
+  async up(db) {
     const docs = Array(50)
       .fill(null)
       .map(() => {
